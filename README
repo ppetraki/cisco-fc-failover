@@ -1,0 +1,15 @@
+Author: Peter M. Petrakis <peter.petrakis@gmail.com>
+
+cisco-fc-failover is a simple example on how you can
+automate SAN failover using a FC switch. In this example
+we have an MDS 9124 with ssh pubkey authentication. It
+has two vsans configured which essentially represent
+separate switches. The SAN LAN has clients that have
+two FC hbas, wired to each vsan.
+
+Disable a vsan and watch a whole mpath group go away.
+
+This code will serve as a baseline for a more aggressive
+autotest based failover suite, one that will hopefully
+poll the SAN clients and verify that the paths attached
+to the relevant vsan have indeed failed.
